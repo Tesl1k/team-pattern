@@ -14,6 +14,10 @@ namespace CafeLibrary
             return Display();
         }
 
+        public string Undo()
+        {
+            return Display();
+        }
         public string Display()
         {
             return description;

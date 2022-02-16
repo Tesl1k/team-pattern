@@ -20,6 +20,10 @@ namespace CafeLibrary
             return light.Off();
         }
 
+        public string Undo()
+        {
+            return $"Отмена. {light.On()}";
+        }
         public string Display()
         {
             return description;

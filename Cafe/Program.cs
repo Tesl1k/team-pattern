@@ -22,6 +22,7 @@ namespace Cafe
             StereoOnCommand radioOn = new StereoOnCommand(stereo);
             StereoOffCommand radioOff = new StereoOffCommand(stereo);
 
+            Stereo.volume = 11;
 
             remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
             remoteControl.setCommand(1, garageDoorOpen, garageDoorColse);
@@ -30,11 +31,16 @@ namespace Cafe
             Console.WriteLine(remoteControl.toString());
             Console.WriteLine(remoteControl.onButtonWasPushed(0));
             Console.WriteLine(remoteControl.offButtonWasPushed(0));
+            Console.WriteLine(remoteControl.undoButtonWasPushed());
+            Console.WriteLine(remoteControl.toString());
             Console.WriteLine(remoteControl.onButtonWasPushed(1));
             Console.WriteLine(remoteControl.offButtonWasPushed(1));
+            Console.WriteLine(remoteControl.undoButtonWasPushed());
+            Console.WriteLine(remoteControl.toString());
             Console.WriteLine(remoteControl.onButtonWasPushed(4));
             Console.WriteLine(remoteControl.offButtonWasPushed(4));
-
+            Console.WriteLine(remoteControl.undoButtonWasPushed());
+            Console.WriteLine(remoteControl.toString());
 
             Console.ReadKey();
         }

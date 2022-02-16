@@ -8,6 +8,7 @@ namespace CafeLibrary
 {
     public class Stereo
     {
+        public static int volume;
         public string On()
         {
             return "Радио включено";
@@ -25,6 +26,7 @@ namespace CafeLibrary
 
         public string setVolume(int volume)
         {
+            Stereo.volume = volume;
             return $"Громкость звука: {volume}";
         }
     }

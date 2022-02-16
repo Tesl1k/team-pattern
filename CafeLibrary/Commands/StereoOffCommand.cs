@@ -20,6 +20,11 @@ namespace CafeLibrary
             return stereo.Off();
         }
 
+        public string Undo()
+        {
+            return $"Отмена. {stereo.On()}\n{stereo.setCD()}\n{stereo.setVolume(Stereo.volume)}";
+        }
+
         public string Display()
         {
             return description;

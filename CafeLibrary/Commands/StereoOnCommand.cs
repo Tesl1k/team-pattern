@@ -17,8 +17,14 @@ namespace CafeLibrary
         }
         public string Execute()
         {  
-            return $"{stereo.On()}\n{stereo.setCD()}\n{stereo.setVolume(15)}";
+            return $"{stereo.On()}\n{stereo.setCD()}\n{stereo.setVolume(Stereo.volume)}";
         }
+
+        public string Undo()
+        {
+            return $"Отмена. {stereo.Off()}";
+        }
+
 
         public string Display()
         {

@@ -9,7 +9,7 @@ namespace CafeLibrary
     public interface Command
     {
         string Execute();
-
+        string Undo();
         string Display();
         
     }

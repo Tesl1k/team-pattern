@@ -20,6 +20,11 @@ namespace CafeLibrary
             return $"{garageDoor.Down()}\n{garageDoor.Stop()}\n{garageDoor.LightOff()}";
         }
 
+        public string Undo()
+        {
+            return $"Отмена. {garageDoor.Up()}\n{garageDoor.Stop()}\n{garageDoor.LightOn()}";
+        }
+
         public string Display()
         {
             return description;

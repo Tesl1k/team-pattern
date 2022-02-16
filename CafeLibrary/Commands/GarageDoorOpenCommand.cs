@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +19,11 @@ namespace CafeLibrary
         public string Execute()
         {
             return $"{garageDoor.Up()}\n{garageDoor.Stop()}\n{garageDoor.LightOn()}";
+        }
+
+        public string Undo()
+        {
+            return $"Отмена. {garageDoor.Down()}\n{garageDoor.Stop()}\n{garageDoor.LightOff()}";
         }
 
         public string Display()

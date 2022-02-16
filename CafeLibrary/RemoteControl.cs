@@ -10,6 +10,7 @@ namespace CafeLibrary
     {
         Command[] onCommands;
         Command[] offCommands;
+        Command undoCommand;
         public RemoteControl()
         {
             onCommands = new Command[7];
@@ -20,6 +21,8 @@ namespace CafeLibrary
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
+
+            undoCommand = noCommand;
         }
         public void setCommand(int slot, Command onCommand, Command offCommand)
         {
@@ -28,13 +31,19 @@ namespace CafeLibrary
         }
         public string onButtonWasPushed(int slot)
         {
+            undoCommand = onCommands[slot];
             return onCommands[slot].Execute();
         }
         public string offButtonWasPushed(int slot)
         {
+            undoCommand = offCommands[slot];
             return offCommands[slot].Execute() + "\n";
         }
 
+        public string undoButtonWasPushed()
+        {
+            return undoCommand.Undo() + "\n";
+        }
 
         public string toString()
         {
@@ -43,6 +52,8 @@ namespace CafeLibrary
             {
                 x += $"[Ячейка {i+1}] - {onCommands[i].Display()}\t{offCommands[i].Display()}\n";
             }
+
+            x += $"[Отмена] - {undoCommand.Display()}\n";
 
             return x;
         }
