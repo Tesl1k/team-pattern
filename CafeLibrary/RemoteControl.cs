@@ -26,13 +26,13 @@ namespace CafeLibrary
             onCommands[slot] = onCommand;
             offCommands[slot] = offCommand;
         }
-        public void onButtonWasPushed(int slot)
+        public string onButtonWasPushed(int slot)
         {
-            onCommands[slot].Execute();
+            return onCommands[slot].Execute();
         }
-        public void offButtonWasPushed(int slot)
+        public string offButtonWasPushed(int slot)
         {
-            offCommands[slot].Execute();
+            return offCommands[slot].Execute();
         }
 
 

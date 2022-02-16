@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GarageDoorCloseCommand.cs" />
+    <Compile Include="StereoOffCommand.cs" />
+    <Compile Include="StereoOnCommand.cs" />
+    <Compile Include="Stereo.cs" />
     <Compile Include="LightOffCommand.cs" />
     <Compile Include="NoCommand.cs" />
     <Compile Include="GarageDoor.cs" />

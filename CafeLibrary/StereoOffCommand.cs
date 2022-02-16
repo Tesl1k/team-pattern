@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,23 +6,24 @@ using System.Threading.Tasks;
 
 namespace CafeLibrary
 {
-    public class GarageDoorOpenCommand : Command
+    public class StereoOffCommand : Command
     {
-        GarageDoor garageDoor;
-        public string description = "Открытие двери";
+        Stereo stereo;
+        public string description = "Выключение радио";
 
-        public GarageDoorOpenCommand(GarageDoor garageDoor)
+        public StereoOffCommand(Stereo stereo)
         {
-            this.garageDoor = garageDoor;
+            this.stereo = stereo;
         }
         public string Execute()
         {
-            return garageDoor.Up();
+            return stereo.Off();
         }
 
         public string Display()
         {
             return description;
         }
+
     }
 }

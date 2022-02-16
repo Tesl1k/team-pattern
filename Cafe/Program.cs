@@ -13,21 +13,27 @@ namespace Cafe
         {
             RemoteControl remoteControl = new RemoteControl();
             Light livingRoomLight = new Light();
-            Light kitchenLight = new Light();
             GarageDoor garageDoor = new GarageDoor();
+            Stereo stereo = new Stereo();
             LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
             LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
-            LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
-            LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
+            GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
+            GarageDoorCloseCommand garageDoorColse = new GarageDoorCloseCommand(garageDoor);
+            StereoOnCommand radioOn = new StereoOnCommand(stereo);
+            StereoOffCommand radioOff = new StereoOffCommand(stereo);
+
 
             remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-            remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
+            remoteControl.setCommand(1, garageDoorOpen, garageDoorColse);
+            remoteControl.setCommand(4, radioOn, radioOff);
 
             Console.WriteLine(remoteControl.toString());
-            remoteControl.onButtonWasPushed(0);
-            remoteControl.offButtonWasPushed(0);
-            remoteControl.onButtonWasPushed(1);
-            remoteControl.offButtonWasPushed(1);
+            Console.WriteLine(remoteControl.onButtonWasPushed(0));
+            Console.WriteLine(remoteControl.offButtonWasPushed(0));
+            Console.WriteLine(remoteControl.onButtonWasPushed(1));
+            Console.WriteLine(remoteControl.offButtonWasPushed(1));
+            Console.WriteLine(remoteControl.onButtonWasPushed(4));
+            Console.WriteLine(remoteControl.offButtonWasPushed(4));
 
 
             Console.ReadKey();
