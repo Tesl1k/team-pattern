@@ -32,7 +32,7 @@ namespace CafeLibrary
         }
         public string offButtonWasPushed(int slot)
         {
-            return offCommands[slot].Execute();
+            return offCommands[slot].Execute() + "\n";
         }
 
 

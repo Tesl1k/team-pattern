@@ -41,17 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GarageDoorCloseCommand.cs" />
-    <Compile Include="StereoOffCommand.cs" />
-    <Compile Include="StereoOnCommand.cs" />
-    <Compile Include="Stereo.cs" />
-    <Compile Include="LightOffCommand.cs" />
-    <Compile Include="NoCommand.cs" />
-    <Compile Include="GarageDoor.cs" />
-    <Compile Include="GarageDoorOpenCommand.cs" />
+    <Compile Include="Commands\GarageDoorCloseCommand.cs" />
+    <Compile Include="Commands\StereoOffCommand.cs" />
+    <Compile Include="Commands\StereoOnCommand.cs" />
+    <Compile Include="Object\Stereo.cs" />
+    <Compile Include="Commands\LightOffCommand.cs" />
+    <Compile Include="Commands\NoCommand.cs" />
+    <Compile Include="Object\GarageDoor.cs" />
+    <Compile Include="Commands\GarageDoorOpenCommand.cs" />
     <Compile Include="RemoteControl.cs" />
-    <Compile Include="LightOnCommand.cs" />
-    <Compile Include="Light.cs" />
+    <Compile Include="Commands\LightOnCommand.cs" />
+    <Compile Include="Object\Light.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

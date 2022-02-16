@@ -1,23 +1,25 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CafeLibrary
 {
-    public class GarageDoorCloseCommand : Command
+    public class GarageDoorOpenCommand : Command
     {
         GarageDoor garageDoor;
         public string description = "Открытие двери";
 
-        public GarageDoorCloseCommand(GarageDoor garageDoor)
+        public GarageDoorOpenCommand(GarageDoor garageDoor)
         {
             this.garageDoor = garageDoor;
         }
         public string Execute()
         {
-            return garageDoor.Down();
+            return $"{garageDoor.Up()}\n{garageDoor.Stop()}\n{garageDoor.LightOn()}";
         }
 
         public string Display()

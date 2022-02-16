@@ -10,12 +10,12 @@ namespace CafeLibrary
     {
         public string Up()
         {
-            return "Дверь открыта";
+            return "Дверь открывается";
         }
 
         public string Down()
         {
-            return "Дверь закрыта";
+            return "Дверь закрывается";
         }
 
         public string Stop()
